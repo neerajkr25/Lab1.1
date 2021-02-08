@@ -100,4 +100,3 @@
 			});
 		});
 	</script>
-	#this is new additon line from my side
