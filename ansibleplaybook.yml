@@ -1,0 +1,20 @@
+---
+- name: This is my server installation playbook
+  hosts: web
+  become: yes
+
+  tasks:
+  - name: install the httpd package
+    package:
+      name: httpd
+      state: present
+
+  - name: copy the web content
+    copy:
+      src: text.html
+      dest: /var/www/html
+    
+  - name: start the web server 
+    service:
+      name: httpd
+      state: started
